@@ -36,7 +36,6 @@ The correct route is selected like this:
 
 ```javascript
 $("a").each(function(value, test) {
-  let routeElem = $(this).text();
 
   if ( $(this).attr("method") == request_method && $(this).attr("href") == request_endpoint ) {
     route = $(this).text();
