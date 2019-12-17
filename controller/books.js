@@ -30,6 +30,19 @@ class BookController {
 			internals.send(200, books.getBooks());
 		}
 	}
+
+	removeBook(request_params) {
+
+		let books = new BookModel();
+
+		let id = request_params.id;
+
+		if (books.removeBook(id)) {
+			internals.send(200, {"message": "Book was successfully removed."});
+		} else {
+			internals.send(400, {"error": "Book was not removed."});
+		}
+	}
 }
 
 module.exports = BookController;

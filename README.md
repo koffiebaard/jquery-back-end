@@ -79,7 +79,7 @@ $( 'ul li' ).each(function(value, test) {
 });
 ```
 
-You can add records too:
+You can add records:
 
 ```javascript
 $('<li/>', {
@@ -90,6 +90,14 @@ $('<li/>', {
 
 fs.writeFileSync(db_file, window.document.documentElement.outerHTML, { mode: 0o755 });
 ````
+
+Deletions are super easy too:
+
+```javascript
+let removed = $(`ul li[id=${id}]`).remove();
+
+fs.writeFileSync(db_file, window.document.documentElement.outerHTML, { mode: 0o755 });
+```
 
 
 ## Docker

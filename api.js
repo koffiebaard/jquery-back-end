@@ -44,6 +44,11 @@ else if (route == "add_book") {
 	let books = new BookController();
 	books.addBook();
 }
+else if (route == "remove_book") {
+
+	let books = new BookController();
+	books.removeBook(request_params);
+}
 else if (route == "get_books") {
 	
 	let books = new BookController();
