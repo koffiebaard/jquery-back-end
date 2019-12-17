@@ -22,6 +22,11 @@ RUN chmod 777 /run
 
 RUN /etc/init.d/nginx reload
 
+WORKDIR /var/www
+
+COPY package.json /var/www/
+RUN npm install
+
 COPY . /var/www/
 RUN chmod 777 /var/www/db/*
 
