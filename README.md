@@ -79,6 +79,19 @@ $( 'ul li' ).each(function(value, test) {
 });
 ```
 
+You can add records too:
+
+```javascript
+$('<li/>', {
+    "text": book.name,
+    "author": book.author,
+    "number_of_pages": book.number_of_pages
+}).appendTo('ul');
+
+fs.writeFileSync(db_file, window.document.documentElement.outerHTML, { mode: 0o755 });
+````
+
+
 ## Docker
 
 You can easily run it with Docker:
